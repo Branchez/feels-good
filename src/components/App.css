@@ -3,22 +3,23 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 15vmin;
   pointer-events: none;
+  float: left;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 10s linear;
   }
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  max-height: 20vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -37,6 +38,66 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.new-task-list-item--active, .new-task-list-item--active:hover {
+  border: 1px solid rgba(2,165,209,.5);
+  -webkit-box-shadow: 0 0 1px 1px rgba(2,165,209,.29);
+  box-shadow: 0 0 1px 1px rgba(2,165,209,.29);
+}
+
+.new-task-list-item--open {
+  color: #7db343;
+}
+
+.new-task-list-item {
+  -webkit-box-shadow: 0 1px rgba(187,194,220,.6);
+  box-shadow: 0 1px rgba(187,194,220,.6);
+  display: block;
+  opacity: 1;
+  padding: 0 12px;
+  overflow: hidden;
+  background: #fff;
+  position: relative;
+  border-radius: 4px;
+  margin: 10px 7px 10px 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-box-shadow .1s ease-out;
+  transition: -webkit-box-shadow .1s ease-out;
+  -o-transition: box-shadow .1s ease-out;
+  transition: box-shadow .1s ease-out;
+  transition: box-shadow .1s ease-out,-webkit-box-shadow .1s ease-out;
+  cursor: pointer;
+  border: 1px solid transparent;
+  line-height: 1.4;
+}
+
+.new-task-list-item__price {
+  font-weight: 500;
+  float: right;
+  font-size: 24px;
+  margin-left: 10px;
+  line-height: 24px;
+  color: #292b32;
+}
+
+.new-task-list-item__title {
+  font-weight: 300;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  font-size: 17px;
+  line-height: 20px;
+  color: #292b32;
+  word-break: break-word;
+}
+
+.new-task-list-item__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0 5px;
 }
 
 @keyframes App-logo-spin {

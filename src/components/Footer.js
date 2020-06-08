@@ -1,7 +1,8 @@
 import React from 'react'
 import './App.css';
 
-function Footer () {
+class Footer extends React.Component {
+    render () {
     return (
             <footer>
             <a
@@ -10,10 +11,11 @@ function Footer () {
                 target="_blank"
                 rel="noopener noreferrer"
                 >
-                Learn React
+                Learn Reactor
                 </a>
             </footer>
     );
+    }
 }
 
 export default Footer
